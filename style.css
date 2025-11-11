@@ -388,3 +388,119 @@ footer p { font-size: 0.9em; color: var(--text-light); }
     width: 100%;
     margin-top: 15px;
 }
+/* --- New Relaxation Page Styles --- */
+
+.relaxation-breathing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    position: relative;
+}
+
+.relaxation-breathing-container .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, var(--primary-gradient-start), var(--primary-gradient-end));
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    animation: breathe-visual 8s ease-in-out infinite;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.relaxation-breathing-container #instructions {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+@keyframes breathe-visual {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+.relaxation-sound-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 15px;
+}
+.relaxation-sound-item p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.audio-control {
+    background: var(--primary-gradient-end);
+    border: none;
+    color: white;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+.audio-control:hover {
+    background: var(--primary-gradient-start);
+}
+
+/* Hide the default audio player */
+.relaxation-sound-item audio {
+    display: none;
+}
+/* --- New Resource Page Styles --- */
+
+.resource-section {
+    margin-top: 40px;
+}
+
+.resource-section h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 10px;
+}
+
+.resource-section h2 i {
+    margin-right: 15px;
+    color: var(--primary-gradient-end);
+}
+
+.resource-section h3 {
+    font-family: var(--font-heading);
+    color: var(--text-medium);
+}
+
+.resource-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resource-list li {
+    background-color: var(--background-light);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--primary-gradient-start);
+}
+
+.resource-list a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-gradient-end);
+}
+
+.resource-list a:hover {
+    text-decoration: underline;
+}

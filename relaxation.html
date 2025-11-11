@@ -4,40 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relaxation Module</title>
-    <link rel="stylesheet" href="relaxation.css">
+    <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <div class="relaxation-wrapper">
-
-        <div class="breathing-container">
-            <div class="circle">
-                <p id="instructions">Get Ready...</p>
-            </div>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Stress Relief Portal Logo">
+            <h1>Stress Relief</h1>
         </div>
-        <button id="start-stop-btn" class="btn">Pause</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="relaxation.html">Relaxation</a></li>
+                <li><a href="motivation.html">Motivation</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="productivity.html">Productivity</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="sounds-container glass-card">
-            <h3><i class="fas fa-music"></i> Calming Sounds</h3>
-            <div class="sound-item">
-                <p>Rain</p>
-                <audio src="sounds/rain.mp3" loop></audio> <button class="audio-control"><i class="fas fa-play"></i></button>
+    <main>
+        <div class="content-wrapper">
+            <h1>Breathing Exercise</h1>
+            <p>Focus on your breath. Follow the guide to inhale, hold, and exhale.</p>
+            
+            <div class="relaxation-breathing-container">
+                <div class="circle">
+                    <p id="instructions">Get Ready...</p>
+                </div>
             </div>
-            <div class="sound-item">
+            <button id="start-stop-btn" class="timer-btn" style="margin-top: 20px;">Pause</button>
+        </div>
+
+        <div class="content-wrapper" style="margin-top: 30px;">
+            <h3><i class="fas fa-music"></i> Calming Sounds</h3>
+            <div class="relaxation-sound-item">
+                <p>Rain</p>
+                <audio src="sounds/rain.mp3" loop></audio> 
+                <button class="audio-control"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="relaxation-sound-item">
                 <p>Forest</p>
                 <audio src="sounds/forest.mp3" loop></audio>
                 <button class="audio-control"><i class="fas fa-play"></i></button>
             </div>
         </div>
 
-        <div id="affirmation-container" class="glass-card">
+        <div class="content-wrapper" style="margin-top: 30px;">
             <h3><i class="fas fa-quote-left"></i> Positive Affirmation</h3>
             <p id="affirmation-text">You are capable of amazing things.</p>
-            <button id="new-affirmation-btn" class="btn">New Affirmation</button>
+            <button id="new-affirmation-btn" class="timer-btn">New Affirmation</button>
         </div>
 
-    </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="resources.html">Resources</a>
+        </div>
+        <p>&copy; 2025 Stress Relief Portal</p>
+    </footer>
 
     <script src="relaxation.js"></script>
 </body>
