@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     tabButtons.forEach(button => {
-        button.addEventListener('click', ()F => {
+        button.addEventListener('click', () => {
             switchMode(button.dataset.mode);
         });
     });
