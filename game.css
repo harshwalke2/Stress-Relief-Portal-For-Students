@@ -1,0 +1,173 @@
+/* This is the container for our game */
+#game-container {
+    width: 100%;
+    height: 400px;
+    background-color: #ecf0f1; /* Light background from your style.css */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* This keeps bubbles from going outside */
+    border: 1px solid #dfe6e9; /* Light border from your style.css */
+    margin-top: 20px;
+}
+
+/* This is the style for the bubbles */
+.bubble {
+    position: absolute;
+    bottom: -100px; /* Start below the screen */
+    width: 50px;
+    height: 50px;
+    
+    /* Use the gradient colors from your style.css! */
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    
+    border-radius: 50%;
+    opacity: 0.6;
+    cursor: pointer;
+    
+    /* This makes them float up */
+    animation: float-up 10s linear infinite;
+}
+
+/* This makes them pop! */
+.bubble.pop {
+    animation: none; /* Stop the float animation */
+    transition: all 0.2s ease-out;
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+
+/* Keyframes for the floating animation */
+@keyframes float-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-550px); /* Float all the way to the top */
+    }
+}
+/* --- Styles for Memory Game --- */
+
+#memory-game-board {
+    width: 100%;
+    max-width: 400px; /* Keeps it from getting too wide */
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4x4 grid */
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.memory-card {
+    width: 100%;
+    height: 100%;
+    background-color: #dfe6e9; /* Light grey card back */
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* This is for the 3D flip effect */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+}
+
+.memory-card.flipped {
+    transform: rotateY(180deg); /* The flip animation */
+}
+
+/* A card that is permanently matched */
+.memory-card.matched {
+    opacity: 0.5;
+    cursor: default;
+}
+
+/* Hide the front and back by default */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; /* Icon size */
+    border-radius: 5px;
+}
+
+.card-back {
+    /* Uses your site's gradient! */
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+}
+
+.card-front {
+    background-color: #fff;
+    color: var(--text-dark);
+    transform: rotateY(180deg); /* Start flipped over */
+    border: 1px solid #dfe6e9;
+}
+
+.score-panel {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-medium);
+}
+/* --- Styles for Sequence Game --- */
+
+#sequence-game-board {
+    width: 100%;
+    max-width: 350px; /* Keep it a nice size */
+    height: 350px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.sequence-pad {
+    width: 100%;
+    height: 100%;
+    background-color: #dfe6e9; /* Default color */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.sequence-pad:hover {
+    opacity: 0.8;
+}
+
+/* This class will be added by JavaScript to "light up" the pad */
+.sequence-pad.active {
+    /* Use your site's gradient colors! */
+    background-color: var(--primary-gradient-start);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary-gradient-start);
+}
+
+.sequence-game-controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#sequence-status {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--text-medium);
+}
+
+/* Make pads different colors when active */
+.sequence-pad[data-pad="1"].active { background-color: #81ecec; } /* Cyan */
+.sequence-pad[data-pad="2"].active { background-color: #74b9ff; } /* Blue */
+.sequence-pad[data-pad="3"].active { background-color: #a29bfe; } /* Purple */
+.sequence-pad[data-pad="4"].active { background-color: #fab1a0; } /* Orange */
+
+/* Make pads disabled while sequence is playing */
+#sequence-game-board.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
