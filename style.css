@@ -346,3 +346,45 @@ footer p { font-size: 0.9em; color: var(--text-light); }
     background: var(--border-light);
     color: var(--text-dark);
 }
+/* --- New Music Page Styles --- */
+
+.music-page .category-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap on small screens */
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.music-page .category-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-light);
+    color: var(--text-dark);
+    font-weight: 600;
+    width: 150px; /* Give them a consistent width */
+    height: 120px;
+}
+.music-page .category-card i {
+    color: var(--primary-gradient-end);
+}
+
+.music-page section {
+    margin-bottom: 30px;
+}
+
+.audio-player-block {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.audio-player-block h3 {
+    margin-top: 0;
+    font-family: var(--font-heading);
+}
+.audio-player-block audio {
+    width: 100%;
+    margin-top: 15px;
+}

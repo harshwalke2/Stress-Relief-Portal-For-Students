@@ -6,88 +6,6 @@
     <title>Calming Music & Sounds</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <style>
-    /* CSS for smooth anchor jumping */
-    main h2.category-heading:target,
-    main section:target {
-        padding-top: 5px; 
-        margin-top: -5px; 
-    }
-
-    /* Scroll padding must be inside the html rule */
-    html {
-        scroll-padding-top: 65px; 
-    }
-
-    /* --- Header Layout Fixes --- */
-
-    /* Targets the main header element to use flexbox */
-    header {
-        display: flex; /* Arranges children (logo and nav) in a row */
-        justify-content: space-between; /* Puts space between the logo block and the navigation */
-        align-items: center; /* Vertically centers items */
-        padding: 10px 50px; /* Reduces vertical padding and adds horizontal padding */
-        width: 100%;
-        border-bottom: 1px solid #e0e0e0; /* Adds a clean separator line */
-    }
-
-    /* Fixes the logo area to arrange the image and text */
-    header .logo {
-        display: flex;
-        align-items: center;
-        gap: 15px; /* Adds space between the logo image and the h1 title */
-    }
-
-    /* Styles the image element */
-    header .logo img {
-        height: 40px; /* Sets a consistent size for the logo image */
-        width: auto;
-    }
-
-    /* Styles the navigation list */
-    header nav ul {
-        display: flex;
-        list-style: none; /* Removes bullet points */
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Styles individual navigation links */
-    header nav ul li a {
-        text-decoration: none;
-        color: #4B0082; /* Adjust color to match your purple theme */
-        padding: 0 15px; /* Adds horizontal space between links */
-        font-size: 16px;
-        font-weight: 500;
-    }
-
-    /* --- Main Content White Space Fixes --- */
-
-    /* Targets the main content wrapper, bringing it closer to the header */
-    main .content-wrapper.music-page {
-        padding-top: 20px; /* Significantly reduces the space below the header */
-        max-width: 900px; /* Constrains the width of the main content */
-        margin: 0 auto; /* Centers the main content area */
-    }
-
-    /* Reduces unnecessary space above the main heading */
-    main h1 {
-        margin-top: 0;
-        margin-bottom: 5px; 
-    }
-
-    /* Reduces space above the descriptive paragraph */
-    main p {
-        margin-top: 5px;
-        margin-bottom: 10px; /* Smaller gap below the description */
-    }
-
-    /* Reduces space around the Music Categories heading */
-    main h2.category-heading {
-        margin-top: 10px; 
-        margin-bottom: 10px; 
-    }
-</style>
 </head>
 <body>
     <header>
@@ -139,10 +57,10 @@
             
             ---
             
-                        <section id="flute-audios" style="padding-top: 50px; text-align: center; margin-bottom: 80px;">
-                <h2 style="color: #4B0082; margin-bottom: 30px;">🎧 Flute Audio Collection 🎶</h2>
+                        <section id="flute-audios"></section>
+                        <h2>🎧 Flute Audio Collection 🎶</h2>
 
-                <div class="audio-player-block" style="max-width: 600px; margin: 0 auto 30px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+                        <div class="audio-player-block"></div>
                     <h3>Divine Krishna Bansuri Flute</h3>
                     <audio controls class="single-audio" style="width: 100%;">
                         <source src="audio/krishna-flute.mp3" type="audio/mpeg">
