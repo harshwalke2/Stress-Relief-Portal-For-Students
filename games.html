@@ -28,10 +28,35 @@
 
     <main>
         <div class="content-wrapper">
+            
             <h1>Mindful Clicker</h1>
             <p>A simple, calming game. Click the floating bubbles to gently pop them. There's no score and no time limit. Just relax.</p>
-            
             <div id="game-container">
+            </div>
+
+            
+            <hr style="margin: 40px 0;"> <h1>Calm Memory Match</h1>
+            <p>Find the matching pairs. A simple game to focus your mind.</p>
+            <div class="score-panel">
+                Moves: <span id="moves-counter">0</span>
+            </div>
+            <div id="memory-game-board">
+                </div>
+
+
+            <hr style="margin: 40px 0;"> <h1>Mindful Sequence</h1>
+            <p>Watch the pattern, then repeat it. A gentle game to train your focus.</p>
+            
+            <div class="sequence-game-controls">
+                <button id="sequence-start-btn" class="timer-btn">Start Game</button>
+                <div id="sequence-status">Level: 0</div>
+            </div>
+
+            <div id="sequence-game-board">
+                <div class="sequence-pad" data-pad="1"></div>
+                <div class="sequence-pad" data-pad="2"></div>
+                <div class="sequence-pad" data-pad="3"></div>
+                <div class="sequence-pad" data-pad="4"></div>
             </div>
 
         </div>
