@@ -19,22 +19,24 @@
                 <li><a href="motivation.html">Motivation</a></li>
                 <li><a href="music.html">Music</a></li>
                 <li><a href="productivity.html">Productivity</a></li>
-                <li><a href="games.html">Games</a></li> 
-                <li><a href="resources.html">Resources</a></li> 
+                <li><a href="games.html">Games</a></li>
+                <li><a href="resources.html">Resources</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="content-wrapper">
-            <h1>A Moment for Motivation</h1>
-            <p>Sometimes, a few powerful words are all it takes to shift our perspective. Here are some quotes to reflect on.</p>
+        <div class="content-wrapper" style="text-align: center;"> <h1>A Moment for Motivation</h1>
+            <p>Sometimes, a few powerful words are all it takes to shift our perspective.</p>
             
-            <blockquote>"The greatest weapon against stress is our ability to choose one thought over another."<br><em>– William James</em></blockquote>
+            <blockquote>
+                <p id="quote-text" style="font-size: 1.3em; min-height: 100px;">"Loading..."</p>
+                <em id="quote-author" style="font-size: 1.1em;"></em>
+            </blockquote>
             
-            <blockquote>"You don't have to control your thoughts. You just have to stop letting them control you."<br><em>– Dan Millman</em></blockquote>
-            
-            <blockquote>"Breathe. Let go. And remind yourself that this very moment is the only one you know you have for sure."<br><em>– Oprah Winfrey</em></blockquote>
+            <button id="new-quote-btn" class="timer-btn" style="margin-top: 20px;">
+                New Quote
+            </button>
         </div>
     </main>
     
@@ -45,5 +47,7 @@
         </div>
         <p>&copy; 2025 Stress Relief Portal</p>
     </footer>
+
+    <script src="motivation.js"></script>
 </body>
 </html>
